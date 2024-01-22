@@ -6,51 +6,53 @@
     <link rel="stylesheet" href="styles.css" />
     <title>My weather application</title>
   </head>
-  <body>
-    <main>
-      <form id="search-form">
-        <input
-          type="search"
-          id="search-input"
-          placeholder="Enter a city..."
-          required
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <div class="current-weather">
-        <div>
-          <h1 class="current-city" id="current-city">Cape Town</h1>
-          <p class="info">
-            Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-          </p>
+  <div class="container">
+    <body>
+      <main>
+        <form id="search-form">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Enter a city..."
+            required
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Polokwane</h1>
+            <p class="info">
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="temp">
+            <div>16°C</div>
+          </div>
+          <div class="weather">
+            <div>⛅</div>
+          </div>
         </div>
-        <div class="temp">
-          <div>16°C</div>
-        </div>
-        <div class="weather">
-          <div>⛅</div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/Maselesele02" target="_blank"
-          >Maselesele Muphulusi</a
-        >
-        and is
-        <a
-          href="https://github.com/Maselesele02/shecodes-weather-app-project"
-          target="_blank"
-        >
-          on GitHub</a
-        >
-        and
-        <a href="https://skywatchify.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        >
-      </p>
-    </footer>
-  </body>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/Maselesele02" target="_blank"
+            >Maselesele Muphulusi</a
+          >
+          and is
+          <a
+            href="https://github.com/Maselesele02/shecodes-weather-app-project"
+            target="_blank"
+          >
+            on GitHub</a
+          >
+          and
+          <a href="https://skywatchify.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          >
+        </p>
+      </footer>
+    </body>
+  </div>
   <script src="index.js"></script>
 </html>
