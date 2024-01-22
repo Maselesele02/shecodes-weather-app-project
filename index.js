@@ -15,6 +15,20 @@ function handleSearch(event) {
       const temperature = data.temperature.current;
       const temperatureElement = document.querySelector(".temp");
       temperatureElement.textContent = `${temperature}°C`;
+    });
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const humid = data.temperature.humidity;
+      const humidElement = document.querySelector(".humidity");
+      humidElement.textContent = `Humidity: ${humid}%`;
+    });
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const windspeed = data.wind.speed;
+      const windspeedElement = document.querySelector(".wind");
+      windspeedElement.textContent = `Wind: ${windspeed}km/h`;
     })
     .catch((error) => {
       console.error(error);
