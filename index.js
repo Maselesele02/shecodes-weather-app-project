@@ -24,6 +24,15 @@ function handleSearch(event) {
       const windspeed = data.wind.speed;
       const windspeedElement = document.querySelector(".wind");
       windspeedElement.textContent = `Wind: ${windspeed}km/h`;
+
+      const descript = data.condition.description;
+      const descriptionElement = document.getElementById("description");
+
+      if (descriptionElement) {
+        descriptionElement.textContent = descript;
+      } else {
+        console.error("Element with id 'description' not found.");
+      }
     })
     .catch((error) => {
       console.error(error);
