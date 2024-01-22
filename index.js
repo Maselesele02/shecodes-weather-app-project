@@ -13,19 +13,14 @@ function handleSearch(event) {
     .then((response) => response.json())
     .then((data) => {
       const temperature = data.temperature.current;
+      const roundedTemperature = Math.round(temperature);
       const temperatureElement = document.querySelector(".temp");
-      temperatureElement.textContent = `${temperature}°C`;
-    });
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
+      temperatureElement.textContent = `${roundedTemperature}°C`;
+
       const humid = data.temperature.humidity;
       const humidElement = document.querySelector(".humidity");
       humidElement.textContent = `Humidity: ${humid}%`;
-    });
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
+
       const windspeed = data.wind.speed;
       const windspeedElement = document.querySelector(".wind");
       windspeedElement.textContent = `Wind: ${windspeed}km/h`;
