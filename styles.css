@@ -3,7 +3,9 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .container {
-  background: white;
+  background-image: url("https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
   max-width: 600px;
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
