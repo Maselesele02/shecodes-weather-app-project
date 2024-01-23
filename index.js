@@ -33,6 +33,18 @@ function handleSearch(event) {
       } else {
         console.error("Element with id 'description' not found.");
       }
+      const date = new Date(data.time * 1000);
+      const formattedDate = new Intl.DateTimeFormat("en-US", {
+        weekday: "long",
+        hour: "numeric",
+        minute: "numeric",
+      }).format(date);
+      const dateElement = document.getElementById("date");
+      if (dateElement) {
+        dateElement.textContent = formattedDate;
+      } else {
+        console.error("Element with id 'date' not found.");
+      }
     })
     .catch((error) => {
       console.error(error);
