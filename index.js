@@ -45,6 +45,14 @@ function handleSearch(event) {
       } else {
         console.error("Element with id 'date' not found.");
       }
+      const iconUrl = data.condition.icon_url;
+      const iconElement = document.getElementById("icon");
+
+      if (iconElement) {
+        iconElement.innerHTML = `<img src="${iconUrl}" class="weather-icon">`;
+      } else {
+        console.error("Element with id 'icon' not found.");
+      }
     })
     .catch((error) => {
       console.error(error);
